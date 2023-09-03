@@ -286,7 +286,7 @@ $(document).ready(function () {
                 currentIndex += 1
                 // console.log(currentIndex);
 
-                if (recipe != ' ') {
+                if (recipe != ' ' && recipe != '') {
                     return `<li class="recipe mx-3 my-3 py-2 px-2 rounded-3">${recipe + '' + selecedFood[0][`strIngredient${currentIndex}`]}</li>`
                 }
 
