@@ -89,7 +89,10 @@ $(document).ready(function () {
         $('#loaderParent').addClass('d-none');
         // $($('#loaderParent')).remove();
 
-
+        // ?realod on clicking on logo 
+        $("#sideBar .logo").click(function () {
+            location.reload();
+          })
         // ! =============> API
 
         // ? home api func

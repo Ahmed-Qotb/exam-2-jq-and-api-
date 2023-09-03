@@ -22,6 +22,9 @@ li{
     color: rgba(255, 255, 255, 0.658) !important;
 }
 
+.curserP{
+    cursor: pointer;
+}
 
 #loaderParent{
     position: fixed;
@@ -29,7 +32,7 @@ li{
     right: 0;
     left: 0;
     bottom: 0;
-    z-index: 999999;
+    z-index: 99;
     background-color: black;
 }
 
@@ -61,7 +64,7 @@ li{
 
 #sideBar{
     width: fit-content;
-    z-index: 7;
+    z-index: 999;
 }
 #sideBar .wraper{
     width: 80px;
