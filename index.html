@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yummy</title>
+    <link rel="shortcut icon" href="imgs/logo.png" type="image/x-icon">
+
+    <!-- ! google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+
+    <!-- ! animate library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+    <!-- ! boot strab -->
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+
+    <!-- ! font awesome -->
+    <link rel="stylesheet" href="./css/all.min.css">
+
+    <!-- ! main style sheet -->
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body class="bg-black">
+    <!-- ! loading screen section -->
+    <section id="loaderParent" class="d-flex justify-content-center align-items-center">
+        <span class="loader"></span>
+    </section>
+    <!-- ? loading screen section end-->
+
+    <!-- ! side bar -->
+    <section id="sideBar" class="bg-warning position-fixed bottom-0 top-0">
+        <div class="parent d-flex position-absolute">
+
+            <!-- ?search - cat - area - ingrediants - contact us section -->
+            <div class="box d-flex flex-column justify-content-between">
+
+                <ul class="pages list-unstyled mx-3 my-5 overflow-hidden">
+                    <li id="Search" class="animate__animated mb-3">Search</li>
+                    <li id="Categories" class="animate__animated mb-3 animate__delay-2s">Categories</li>
+                    <li id="Area" class="animate__animated mb-3 animate__delay-3s">Area</li>
+                    <li id="Ingredients" class="animate__animated mb-3 animate__delay-4s">Ingredients</li>
+                    <li id="ContactUs" class="animate__animated mb-3 animate__delay-5s">Contact Us</li>
+                </ul>
+
+                <!-- ?socials -->
+                <div class="mx-3 my-5">
+                    <ul class="d-flex list-unstyled">
+                        <li class="mx-1"><i class="fa-brands fa-facebook"></i></li>
+                        <li class="mx-1"><i class="fa-brands fa-twitter"></i></li>
+                        <li class="mx-1"><i class="fa-solid fa-globe"></i></li>
+                    </ul>
+                    <p>Copyright Â© 2019 All Rights
+                        Reserved.</p>
+                </div>
+
+            </div>
+
+            <!-- ? closing and opening side bar div -->
+            <div class="wraper bg-white d-flex flex-column justify-content-between px-3 align-items-center vh-100">
+
+                <!-- ?yummy logo -->
+                <div class="pt-3">
+                    <div class="cartona w-100">
+                        <img src="./img/git 21.png" alt="yummy logo" class="w-100">
+                    </div>
+                </div>
+
+                <!-- ?open and close side bar btn -->
+                <div class="openSideBarBtn">
+                    <i class="fa-solid fa-bars fa-2x text-black"></i>
+                </div>
+
+                <!-- ? socials -->
+                <div class="d-flex flex-column pb-3">
+                    <i class="fa-solid fa-globe py-2 text-black"></i>
+                    <i class="fa-solid fa-share-nodes py-2 text-black"></i>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+    <!-- ? side bar end -->
+
+    <!-- !  home section-->
+    <section id="home" class="d-flex justify-content-center my-4 ">
+        <div class="container px-5 mx-5">
+            <div class="row gy-3 text-center" id="homeContainer">
+
+            </div>
+        </div>
+    </section>
+    <!-- ? section home end-->
+
+    <!-- ! search section -->
+    <section id="searchSec" class="search d-flex justify-content-center d-none">
+        <div class="container px-5 mx-5">
+
+            <!-- ? searching -->
+            <div class="row gy-3 py-3">
+
+                <!-- ?search by name -->
+                <div class="col-lg-6">
+                    <input type="text" id="byName" placeholder="Search By Name"
+                        class="text-white form-control bg-black">
+                </div>
+
+                <!-- ?search by first letter -->
+                <div class="col-lg-6">
+                    <input type="text" id="byFirstLetter" placeholder="Search By First Letter"
+                        class="form-control bg-black text-white">
+                </div>
+
+            </div>
+
+            <!-- ?div to show search results by letter or name -->
+            <div>
+                <div class="container px-5 mx-5">
+                    <div class="row gy-3" id="showItems">
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <!-- ? search section end-->
+
+    <!-- !categories section-->
+    <section id="categoriesSec" class=" d-flex justify-content-center d-none my-4">
+        <div class="container px-5 mx-5">
+            <div class="row gy-3" id="categoriesBox">
+
+            </div>
+        </div>
+    </section>
+    <!-- ?categories section end-->
+
+    <!-- !area section-->
+    <section id="areaSec" class="d-flex justify-content-center my-4 d-none">
+        <div class="container px-5 mx-5">
+            <div class="row gy-3 text-center" id="areaBox">
+
+            </div>
+        </div>
+    </section>
+    <!-- ?area section end-->
+
+    <!-- !ingrediants section-->
+    <section id="ingrediantsSec" class=" d-flex justify-content-center my-4 d-none">
+        <div class="container px-5 mx-5">
+            <div class="row gy-3 text-center" id="ingrediantsBox">
+
+            </div>
+        </div>
+    </section>
+    <!-- ?ingrediants section end-->
+
+    <!-- !contact us section-->
+    <section id="contactUsSec" class="d-flex justify-content-center align-items-center vh-100 d-none">
+
+        <div class="container px-5 mx-5">
+            <div class="row gy-4">
+                <div class="parent col-md-12">
+                    <div class="row gy-4">
+                        <div class="col-md-6">
+                            <input id="Name" type="text" placeholder="Enter Your Name" class="form-control">
+                            <span id="NameAlert" class="w-100 mt-2 d-none px-2 rounded-3 text-center py-2">Special
+                                characters and numbers not allowed</span>
+                        </div>
+
+                        <div class="col-md-6">
+                            <input id="Email" type="text" placeholder="Enter Your Email" class="form-control">
+                            <span id="EmailAlert" class="w-100 mt-2 d-none px-2 rounded-3 text-center py-2">Email not
+                                valid *exemple@yyy.zzz</span>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="parent col-md-12">
+                    <div class="row gy-4">
+                        <div class="col-md-6">
+                            <input id="Phone" type="text" placeholder="Enter Your Phone" class="form-control">
+                            <span id="PhoneAlert" class="w-100 mt-2 d-none px-2 rounded-3 text-center py-2">Enter valid
+                                Phone Number</span>
+                        </div>
+
+                        <div class="col-md-6">
+                            <input id="Age" type="text" placeholder="Enter Your Age" class="form-control">
+                            <span id="AgeAlert" class="w-100 mt-2 d-none px-2 rounded-3 text-center py-2">Enter valid
+                                age</span>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="parent col-md-12">
+                    <div class="row gy-4">
+                        <div class="col-md-6">
+                            <input id="Password" type="text" placeholder="Enter Your Password" class="form-control">
+                            <span id="PasswordAlert" class="w-100 mt-2 d-none px-2 rounded-3 text-center py-2">Enter
+                                valid password *Minimum eight characters, at least one letter and one number:*</span>
+                        </div>
+
+                        <div class="col-md-6">
+                            <input id="Repassword" type="text" placeholder="Repassword" class="form-control">
+                            <span id="RepasswordAlert" class="w-100 mt-2 d-none px-2 rounded-3 text-center py-2">Enter
+                                valid repassword</span>
+                        </div>
+
+                    </div>
+                </div>
+
+
+
+
+            </div>
+            <!-- ?submit contact btn -->
+            <div class="text-center mt-3">
+                <button id="submit" disabled class="btn btn-outline-danger">submit</button>
+            </div>
+
+
+        </div>
+
+    </section>
+    <!-- ?contact us section end-->
+
+    <!-- !about food section -->
+    <section id="about" class="d-flex justify-content-center my-4 d-none">
+        <div class="container px-5 mx-5">
+            <div class="row" id="aboutParent">
+
+            </div>
+
+        </div>
+    </section>
+    <!-- ?about food section end-->
+
+
+
+
+
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./js/code.jquery.com_jquery-3.7.0.min.js"></script>
+    <script src="./js/script.js"></script>
+</body>
+
+</html>

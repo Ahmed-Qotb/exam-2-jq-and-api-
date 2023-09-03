@@ -1,0 +1,147 @@
+/* * global */
+:root {
+    --animate-delay: 0.1s;
+  }
+body{
+    color: white;
+    overflow: hidden;
+}
+
+img{
+    width: 100%;
+}
+
+i{
+    cursor: pointer;
+}
+
+li{
+    cursor: pointer;
+}
+::placeholder{
+    color: rgba(255, 255, 255, 0.658) !important;
+}
+
+
+#loaderParent{
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 999999;
+    background-color: black;
+}
+
+.loader {
+    width: 100px;
+    height: 100px;
+    border: 15px dotted #FFF;
+    border-radius: 50%;
+    display: inline-block;
+    position: relative;
+    box-sizing: border-box;
+    animation: rotation 2s linear infinite;
+  }
+  
+  @keyframes rotation {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  } 
+/* * global end*/
+
+
+
+
+/* * side bar */
+
+#sideBar{
+    width: fit-content;
+    z-index: 7;
+}
+#sideBar .wraper{
+    width: 80px;
+}
+#sideBar .box{
+    width: 280px;
+    background: #000;
+    height: 100vh;
+}
+.pages li{
+    bottom: 0;
+}
+
+/* * side bar end */
+
+/* * home */
+
+.foodName{
+    background-color: rgba(240, 248, 255, 0.884);
+    color: black;
+    opacity: 80%;
+    top: 100%;
+    left: 0;
+    right: 0;
+    bottom: -300px;
+    transition: all 0.5s;
+    cursor: pointer;
+}
+
+.parent:hover .foodName{
+    top: 0;
+    bottom: 0;
+}
+
+/* * home end*/
+
+/* * category */
+
+.catInfo{
+    background-color: aliceblue;
+    top: 100%;
+    left: 0;
+    right: 0;
+    text-align: center;
+    transition: all 0.5s;
+    opacity: 80%;
+}
+
+#categoriesSec .parent:hover .catInfo{
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+/* * category end*/
+
+
+
+
+/* * contact section */
+
+#contactUsSec ::placeholder{
+    color: rgba(0, 0, 0, 0.486) !important;
+}
+#contactUsSec span{
+    background-color: #F8D7DA;
+    color:#B55529 ;
+}
+
+/* * contact section end*/
+
+/* * food info */
+
+.recipe{
+    background-color:#CFF4FC ;
+}
+
+.tags{
+    background-color: #F8D7DA;
+}
+
+/* * food info end*/
